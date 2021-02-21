@@ -23,7 +23,8 @@
 - Dark mode has been added.
 - Mutiple pages with information.
 - Link to external works.
-- Adding animations with @keyframes (CSS)
+- Added animations with @keyframes (CSS)
+- Added CNAME to redirect content to domain.
 
 ## Technologies 🛠
 - HTML
