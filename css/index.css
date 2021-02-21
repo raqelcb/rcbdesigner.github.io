@@ -1,0 +1,271 @@
+
+@charset "UTF-8";
+/* Custom properties */
+:root {
+  --black: #131313;
+  --white: #fafafa;
+  --alpha: #f8f8f873;
+  --shadow-first: #c9c9c9;
+  --shadow-second: #ffffff;
+  --border-black: #00000050;
+  --marked: rgb(255, 242, 127);
+
+  --principal-typo: Helvetica, Arial, sans-serif;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --black: #fafafa;
+    --white: #131313;
+    --alpha: #49494973;
+    --shadow-first: #302f2f;
+    --shadow-second: #181717;
+    --border-black: #ffffff93;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  object-fit: cover;
+  object-position: center center;
+}
+
+a {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+video {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  object-fit: cover;
+  object-position: center center;
+}
+
+p a {
+  display: inline;
+}
+
+li {
+  list-style-type: none;
+}
+
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  hyphens: auto;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+::selection {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+form, input, textarea, select, button {
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  display: block;
+  color: inherit;
+}
+
+body {
+  font-family: var(--principal-typo);
+  font-size: 100%;
+  min-height: 100vh;
+  background-color: var(--white);
+  color: var(--black);
+  hyphens: auto;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes appear {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes appearTitle {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes appearTwo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.navbar__header {
+  width: 100%;
+  padding: 1em 5vw;
+  background: var(--white);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  animation: appear 2s ease 1 both;
+}
+.navbar .navbar__a {
+  font-size: 1.5em;
+}
+.navbar__ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar__li {
+  margin: 0 1em;
+  color: var(--marked);
+}
+.navbar__logo{
+  width: 20%;
+  height: 20%;
+  display: flex;
+}
+
+.home__overlay{
+  width: 100%;
+  min-height: 100vh;
+  padding: 10vh 5vw;
+  animation: appearTwo 2s ease 1 both;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.body .home {
+  color: var(--white);
+  background: url(../assets/img/intro-bg.jpg) no-repeat center center/cover fixed;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.home__h1 {
+  animation: appearTitle 2s ease 1 both 1s;
+  color: var(--black);
+}
+
+.home__p {
+  animation: appearTitle 2s ease 1 both 3s;
+  color: var(--black);
+}
+
+.works {
+  text-align: center;
+}
+.works__grid {
+  width: 100%;
+  margin: 1em 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+.works__article {
+  position: relative;
+}
+.works__article .works__h4 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--alpha);
+  color: var(--white);
+  backdrop-filter: blur(20px);
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.works .works__article:hover .works__h4 {
+  opacity: 1;
+}
+
+.about .part {
+  margin: 1em 0;
+}
+
+.about .img {
+  width: 10em;
+  height: 10em;
+}
+
+.footer {
+  width: 100%;
+  min-height: 10vh;
+  background: var(--white);
+  color: var(--black);
+  padding: 5vw;
+}
+
+
+
+
+.back-top i{
+  padding-top: 20px;
+  padding-left: 90%;
+  color: var(--black);
+}
+
+
+
+@media (max-width: 768px){
+  .back-top {
+    bottom: 15px;
+  }
+}
