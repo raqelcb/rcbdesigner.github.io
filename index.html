@@ -19,10 +19,13 @@
 
 <body class="body" id="body__page">
   <header class="navbar__header">
-    <nav class="navbar__nav">
+    <nav class="navbar__nav navbar__transition">
       <div class="container">
-        <a class="navbar__a" href="index.html" title="Logo"> <img class="navbar__logo" src="assets/img/rcb-logo-white.png" alt="logo"></a>
-        <!--<button class="navbar__button" type="button">BUTTON</button>-->
+        <a class="navbar__brand" href="index.html" title="Logo"> <img class="navbar__logo" src="assets/img/rcb-logo-white.png" alt="logo"></a>
+        <button class="navbar__button" type="button">BUTTON</button>
+        <span></span>
+        <span></span>
+        <span></span>
         <div class="navbar__collapse" id="navbar__default">
           <ul class="navbar__ul">
             <li class="navbar__li">
@@ -44,9 +47,9 @@
   </header>
 
   
-  <div class="home" id="home">
+  <div class="home bg__img" id="home">
     <div class="home__overlay">
-      <div class="home__content">
+      <div class="home__content home__display">
         <div class="table">
           <div class="container">
             <h1 class="home__h1">I'm Raquel Cuesta</h1>
@@ -64,10 +67,12 @@
 
   <main class="main" id="main"></main>
 
-    <section class="main__section works" id="works">
+    <section class="main__section works section" id="works">
       <div class="container">
+        <div class="works__title">
         <h2 class="works__h2">Portfolio</h2>
         <p class="works__p">All my works</p>
+      </div>
         <div class="line"></div>
 
         <div class="works__grid">
