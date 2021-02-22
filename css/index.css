@@ -899,6 +899,7 @@ body {
 .footer .centered .footer__ul {
   width: 100%;
   display: flex;
+  /* font-size: 1.6em; */
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
