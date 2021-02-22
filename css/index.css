@@ -154,7 +154,7 @@ body {
   }
 }
 
-/* .navbar__header {
+/*.navbar__header {
   width: 100%;
   padding: 1em 5vw;
   background: var(--white);
@@ -168,30 +168,7 @@ body {
   z-index: 1;
   animation: appear 2s ease 1 both;
 }
-.navbar .navbar__a {
-  font-size: 1.5em;
-}
-.navbar__ul {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-}
-.navbar__li {
-  margin: 0 1em;
-  color: var(--marked);
-}
-.navbar__logo {
-  width: 20%;
-  height: 0%;
-  display: flex;
-}
-.navbar__nav {
-  transition: all 0.5s ease-in-out;
-  background-color: transparent;
-  padding-top: 1.563rem;
-  padding-bottom: 1.563rem;
-}
+
 .navbar__nav .navbar__small {
   box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
 }
@@ -275,11 +252,7 @@ body {
 .navbar__nav .navbar__small .navbar__button span {
   background-color: #1B1B1B;
 }
-.navbar__nav .navbar__brand {
-  color: #fff;
-  font-size: 1.6rem;
-  font-weight: 600;
-}
+
 .navbar__nav .navbar__ul .dropdown-item.show .dropdown-menu,
 .navbar__nav .dropdown.show .dropdown-menu,
 .navbar__nav .dropdown-btn.show .dropdown-menu {
@@ -303,27 +276,7 @@ body {
   background-color: #e19e38;
 }
 
-/*HAMBURGER MENU*/
-.navbar__button {
-  position: relative;
-}
-.navbar__button:focus,
-.navbar__button:active {
-  outline: 0;
-}
-.navbar__button span {
-  display: block;
-  background-color: #fff;
-  height: 3px;
-  width: 25px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-  transform: rotate(0deg);
-  left: 0;
-  opacity: 1;
-}
-
-/*SUBMENU NAV*/
+/*MENU NAV*/
 .navbar__header .navbar__li:hover .submenu__ul{
   display: block;
   pointer-events: visible;
@@ -348,7 +301,7 @@ body {
 }
 .navbar__header .subnav__li .submenu__item:hover{
   color: var(--grey-hover);
-} */
+} 
 .navbar__header{
   width: 100%;
   background-color: var(--blanco);
@@ -364,12 +317,26 @@ body {
   align-items: center;
   align-content: initial;
 }
+.navbar__nav {
+  transition: all 0.5s ease-in-out;
+  background-color: transparent;
+  padding-top: 1.563rem;
+  padding-bottom: 1.563rem;
+}
 .navbar__span {
   display: none;
 }
 .navbar__brand {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
   display: block;
   object-fit: none;
+}
+.navbar__logo {
+  width: 20%;
+  height: 0%;
+  display: flex;
 }
 .navbar__ul {
   width: 100%;
@@ -379,39 +346,23 @@ body {
   align-items: initial;
   align-content: initial;
 }
-@media screen and (max-width: 700px) {
-  .navbar__ul {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: initial;
-    align-content: initial;
-    margin: 2em;
-  }
-}
+
 .navbar__li {
   margin-left: 3.37em;
+  margin: 0 1em;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.2em;
   font-size: 0.8em;
   position: relative;
+  color: var(--marked);
 }
 .navbar__li:hover .subnav__ul {
   pointer-events: visible;
   opacity: 100%;
   transition: all 0.9s ease;
 }
-@media screen and (max-width: 700px) {
-  .navbar__li {
-    margin-left: 0;
-    padding: 1.5em;
-    border-bottom: solid 0.01px var(--gris-text-2);
-  }
-  .navbar__li.last {
-    border-bottom: none;
-  }
-}
+
 .subnav__ul {
   min-width: 18em;
   background-color: var(--blanco);
@@ -420,11 +371,7 @@ body {
   opacity: 0%;
   position: absolute;
 }
-@media screen and (max-width: 700px) {
-  .subnav__ul {
-    display: none;
-  }
-}
+
 .subnav__li {
   min-width: 18em;
   margin-bottom: 2em;
@@ -433,6 +380,9 @@ body {
 .subnav__li.first {
   padding: 2em 1.8em 0 1.8em;
   border-top: solid 0.4em var(--principal);
+}
+.navbar .navbar__a {
+  font-size: 1.5em;
 }
 .navbar__a-home {
   color: var(--principal);
@@ -452,25 +402,7 @@ body {
   color: var(--principal);
   transition: all 0.5s ease;
 }
-@media screen and (max-width: 700px) {
-  .navbar__collapse {
-    width: 100%;
-    background-color: var(--blanco);
-    top: 90px;
-    left: 0;
-    opacity: 0%;
-    transition: all 0.7s ease;
-    transform: translateY(-10%);
-    pointer-events: none;
-    position: absolute;
-  }
-  .navbar__collapse.ver {
-    display: flex;
-    opacity: 97%;
-    transform: translateY(0%);
-    pointer-events: auto;
-  }
-}
+
 .navbar__mobile {
   display: flex;
   flex-flow: row nowrap;
@@ -480,11 +412,47 @@ body {
   font-size: 1.5em;
   color: var(--gris-footer);
 }
-@media screen and (min-width: 700px) {
-  .navbar__mobile {
-    display: none;
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*HAMBURGER MENU*/
+.navbar__button {
+  position: relative;
 }
+.navbar__button:focus,
+.navbar__button:active {
+  outline: 0;
+}
+.navbar__button span {
+  display: block;
+  background-color: #fff;
+  height: 3px;
+  width: 25px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  transform: rotate(0deg);
+  left: 0;
+  opacity: 1;
+}
+
+
+
 
 
 
@@ -773,7 +741,7 @@ body {
 .footer .footer__credits {
   margin-bottom: 0;
 }
-.footer .footer__credits a {
+.footer .footer__credits .footer__a {
   color: var(--black);
 }
 
@@ -865,6 +833,19 @@ body {
   }
 }
 
+@media screen and (max-width: 800px) {
+  .works {
+    margin: 4em 0;
+  }
+  .works__box {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2.5em;
+  }
+  .footer__h2 {
+    letter-spacing: 0.1em;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .back-top {
     bottom: 15px;
@@ -890,6 +871,51 @@ body {
   }
   .home .home__p {
     font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .navbar__ul {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: initial;
+    align-content: initial;
+    margin: 2em;
+  }
+  .navbar__collapse {
+    width: 100%;
+    background-color: var(--blanco);
+    top: 90px;
+    left: 0;
+    opacity: 0%;
+    transition: all 0.7s ease;
+    transform: translateY(-10%);
+    pointer-events: none;
+    position: absolute;
+  }
+  .navbar__collapse.ver {
+    display: flex;
+    opacity: 97%;
+    transform: translateY(0%);
+    pointer-events: auto;
+  }
+  .navbar__li {
+    margin-left: 0;
+    padding: 1.5em;
+    border-bottom: solid 0.01px var(--gris-text-2);
+  }
+  .navbar__li.last {
+    border-bottom: none;
+  }
+  .subnav__ul {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .navbar__mobile {
+    display: none;
   }
 }
 
