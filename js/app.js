@@ -71,14 +71,14 @@ var siguienteFoto = function () {
   flechas[1].addEventListener('click', anteriorFoto);
 
 
- // Preloader
- $(window).on('load', function() {
-    if ($('#preloader').length) {
-      $('#preloader').delay(100).fadeOut('slow', function() {
-        $(this).remove();
-      });
-    }
-  });
+//  // Preloader
+//  $(window).on('load', function() {
+//     if ($('#preloader').length) {
+//       $('#preloader').delay(100).fadeOut('slow', function() {
+//         $(this).remove();
+//       });
+//     }
+//   });
 
 
 // Back to top button

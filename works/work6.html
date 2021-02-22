@@ -5,85 +5,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RCB Designer</title>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" >
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="../css/index.css"/>
-    <script src="js/app.js" defer></script>
+    <link rel="stylesheet"        href="../css/index.css">
+    <link rel="stylesheet"        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous"/>
+    <link rel="stylesheet"        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="preconnect"        href="https://fonts.gstatic.com">
+    <link rel="icon"              href="../assets/img/favicon.png">
+    <link rel="apple-touch-icon"  href="../assets/img/favicon-orange.png" >
+    <link rel="stylesheet"        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap">
+    
+    <script src="../js/app.js" defer   type="text/javascript"></script>
+    <!-- <script src="assets/vendor/typed.js/typed.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  -->
   </head>
 
 
   <body class="body" id="body__page">
-    <header class="navbar__header">
-      <nav class="navbar__nav">
-        <div class="container">
-          <a class="navbar__a" href="index.html" title="Logo"> <img class="navbar__logo" src="..assets/img/rcb-logo-white.png" alt="logo"></a>
-        <!--<button class="navbar__button" type="button">BUTTON</button>-->
-        <div class="navbar__collapse" id="navbar__default">
-            <ul class="navbar__ul">
-              <li class="navbar__li">
-                <a class="navbar__a active" href="../index.html" title="Home">Home</a>
-              </li>
-              <li class="navbar__li">
-                <a class="navbar__a" href="../index.html/#works" title="Portfolio">Portfolio</a>
-              </li>
-              <li class="navbar__li">
-                <a class="navbar__a" href="../about.html" title="About">About</a>
-              </li>
-              <li class="navbar__li">
-                <a class="navbar__a" href="../contact.html" title="Contact">Contact</a>
-              </li>
-            </ul>
-          </div>
+
+
+    <!--HEADER / NAVBAR MENU-->
+    <header class="header">
+        <div class="centered">
+            <h1 class="header__h1">
+                <a class="header__a" href="../index.html"  title="logo" >
+                    <button class="header__button" type="button"><img class="header__logo" src="../assets/img/rcb-logo-white.png" alt="logo"></button>
+                </a>
+            </h1>
+            <i class="fas fa-bars"></i>
+            <nav class="menu">
+                <ul class="ul">
+                    <li class="li">
+                        <a class="menu__a" href="../index.html" title="Home">Home</a>
+                    </li>
+                    <li class="li item1"><a class="a" href="../about.html" title="About">About</a>
+                        <ul class="ul2">
+                            <li class="li2"><a class="a" href="#"title="Other">Other</a></li>
+                            <li class="li2"><a class="a" href="#"title="Other">Other</a></li>
+                            <li class="li2"><a class="a" href="#"title="Other">Other</a></li>
+                            <li class="li2"><a class="a" href="#"title="Other">Other</a></li>
+                            <li class="li2"><a class="a" href="#"title="Other">Other</a></li>                            
+                            <li class="li2"><a class="a" href="#"title="Other">Other</a></li>
+                            <li class="li2"><a class="a" href="#"title="Other">Other</a></li>
+                            <li class="li2"><a class="a" href="#"title="Other">Other</a></li>
+                        </ul>
+                    </li>
+                    <li class="li item2"><a class="a" href="../index.html/#works" title="Portfolio">Portfolio</a>
+                        <ul class="ul3">
+                            <li class="li3 first"><i class="fas fa-angle-left"></i><a class="a" href="#">Graphic Design</a>
+                                <ul class="sub1">
+                                    <li class="lisub"><a class="a" href="works/work1.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work2.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work3.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work4.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work5.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work6.html">Other</a></li>
+                                </ul>
+                            </li>
+                            <li class="li3 second"><i class="fas fa-angle-left"></i><a class="a" href="#">Frontend Development</a>
+                                <ul class="sub2">
+                                    <li class="lisub"><a class="a" href="works/work1.html">Pixar</a></li>
+                                    <li class="lisub"><a class="a" href="works/work2.html">STKHLM</a></li>
+                                    <li class="lisub"><a class="a" href="works/work3.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work4.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work5.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work6.html">Other</a></li>
+                                </ul>
+                            </li>
+                            <li class="li3 third"><i class="fas fa-angle-left"></i><a class="a" href="#">Brand Identity</a>
+                                <ul class="sub3">
+                                    <li class="lisub"><a class="a" href="works/work1.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work2.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work3.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work4.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work5.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work6.html">Other</a></li>
+                                </ul>
+                            </li>
+                            <li class="li3 fourth"><i class="fas fa-angle-left"></i><a class="a" href="#">Video</a>
+                                <ul class="sub4">
+                                    <li class="lisub"><a class="a" href="works/work1.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work2.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work3.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work4.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work5.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work6.html">Other</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="li item3"><a class="a" href="../contact.html" title="Shop">Contact</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-      </nav>
     </header>
 
     <main class="main">
 
-      <section class="section works">
+      <!-- <section class="section works">
         <div class="section intro" id="work1">
           <div class="overlay"></div>
             <div class="section__content">
               <div class="container">
-                <h2 class="section__h2">WORK 3</h2>
+                <h2 class="section__h2">WORK 1</h2>
                 <ol class="section__ol">
                   <li class="section__li">
                     <a href="#">Home</a>
                   </li>
-                  <li class="section__li active">WORK 3X</li>
+                  <li class="section__li active">WORK 1X</li>
                 </ol>
               </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!--MAIN??-->
       <section class="work__details">
         <div class="container">
           <div class="work__container">
             <div class="work__carousel">
-              <img src="assets/img/slide0.jpg" class="work__img" alt="" loading="lazy">
-              <img src="assets/img/slide0.jpg" class="work__img" alt="" loading="lazy">
-              <img src="assets/img/slide0.jpg" class="work__img" alt="" loading="lazy">
+              <img src="../assets/img/intro-bg.jpg" class="work__img ver" alt="" loading="lazy">
+              <img src="../assets/img/tarjeta.jpg" class="work__img" alt="" loading="lazy">
+              <img src="../assets/img/intro-bg.jpg" class="work__img" alt="" loading="lazy">
+              
+              <div class="slider__flecha siguiente">
+                <i class="slider__fas fas fa-angle-right"></i>
+              </div>
+              <div class="slider__flecha anterior">
+                <i class="slider__fas fas fa-angle-left"></i>
+              </div>
             </div>
 
             <div class="work__info">
+              <span>Project Information</span>
               <h3 class="work__h3">Project information</h3>
               <ul class="work__ul">
                 <li class="work__li"><strong>Category</strong>: Web design</li>
                 <li class="work__li"><strong>Client</strong>: Edu Fierro</li>
                 <li class="work__li"><strong>Project date</strong>: February, 2021</li>
-                <li class="work__li"><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+                <li class="work__li"><strong>Project URL</strong>: <a href="https://github.com/raqelcb/stockholm">www.stockholm.com</a></li>
               </ul>
             </div>
           </div>
 
           <div class="work__description">
-            <h2 class="work__h2">
-              Replicate Pixar Landing Page
-            </h2>
+            <span>Replicate Pixar Landing Page</span>
+            <h2 class="work__h2">Replicate Pixar Landing Page</h2>
             <p class="work__p">
               Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
             </p>
@@ -93,31 +159,26 @@
     
     </main>
 
-
     <footer class="footer">
-      <div class="container">
-        <div class="info">
+      <div class="centered">
           <div class="footer__copy">
-            <p class="footer__p">&copy; Copyright <strong>RCBdesigner</strong>. All Rights Reserved</p>
-            <div class="footer__credits">
-              Designed by <a href="https://github.com/raqelcb">RCBdesigner</a>
-            </div>
-            <h2 class="footer__h2">
-              <!--  <img class="footer__img" src="assets/img/rcb-logo-black.png" alt="logo"> -->
-              RCB
-            </h2>
-    
-            <ul class="footer__ul">
-              <li class="footer__li"><a class="footer__a" href="#" title="Github" target="_blank"
-                  rel="noopener noreferrer">Github</a></li>
-              <li class="footer__li"><a class="footer__a" href="#" title="LinkedIn" target="_blank"
-                  rel="noopener noreferrer">LinkedIn</a></li>
-            </ul>
-    
+              <p class="footer__p">&copy; Copyright <strong>RCBdesigner</strong>. All Rights Reserved</p>
           </div>
-        </div>
+          <div class="footer__credits">
+              Designed & Development by <a href="https://github.com/raqelcb"> RCBdesigner</a>
+          </div>
+          <h2 class="footer__h2">
+          <img class="footer__img" src="../assets/img/rcb-logo-orange.png" alt="logo">
+          </h2>
+          <div class="footer__line"></div>
+          <ul class="footer__ul">
+              <li class="footer__li"><a class="footer__a" href="https://github.com/raqelcb" title="Github" target="_blank"
+                      rel="noopener noreferrer"><i class="fab fa-github"></i></a></li>
+              <li class="footer__li"><a class="footer__a" href="https://www.linkedin.com/in/rcbdesigner/" title="LinkedIn"
+                      target="_blank" rel="noopener noreferrer"><i class="fab fab fa-linkedin"></i></a></li>
+          </ul>
       </div>
-    </footer>
+  </footer>
     
     <a href="#" class="back-top">
       <i class="fa fa-chevron-up"></i>
