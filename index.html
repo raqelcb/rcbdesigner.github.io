@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RCB Designer</title>
 
-    <link rel="stylesheet"          href="css/index.css">
-    <link rel="stylesheet"          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous"/>
-    <link rel="stylesheet"          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="preconnect"          href="https://fonts.gstatic.com">
-    <link rel="shortcut icon"       href="https://demo.select-themes.com/stockholm14/wp-content/uploads/2020/12/Favicon.png" type="image/x-icon" >
-    <link rel="apple-touch-icon"    href="https://stockholmlanding.qodeinteractive.com/wp-content/uploads/2020/10/Favicon.png">
-    <link rel="stylesheet"          href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap">
-    <script src="js/app.js" defer type="text/javascript"></script>
+    <link rel="stylesheet"        href="css/index.css">
+    <link rel="stylesheet"        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous"/>
+    <link rel="stylesheet"        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="preconnect"        href="https://fonts.gstatic.com">
+    <link rel="icon"              href="assets/img/favicon.png">
+    <link rel="apple-touch-icon"  href="assets/img/favicon-orange.png" >
+    <link rel="stylesheet"        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap">
+    
+    <script src="js/app.js" defer   type="text/javascript"></script>
+    <script src="assets/vendor/typed.js/typed.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 </head>
 
 <body>
@@ -22,16 +25,16 @@
         <div class="centered">
             <h1 class="header__h1">
                 <a class="header__a" href="index.html"  title="logo" >
-                    <button class="header__button" type="button"><img class="header__logo" src="assets/img/rcb-logo-white.png" alt="logo"></button>
+                    <button class="header__button" type="button"><img class="header__logo" src="assets/img/rcb-logo-orange.png" alt="logo"></button>
                 </a>
             </h1>
             <i class="fas fa-bars"></i>
             <nav class="menu">
                 <ul class="ul">
                     <li class="li">
-                        <a class="menu__a" href="#" title="Home">Home</a>
+                        <a class="menu__a" href="index.html" title="Home">Home</a>
                     </li>
-                    <li class="li item1"><a class="a" href="#" title="Pages">About</a>
+                    <li class="li item1"><a class="a" href="about.html" title="About">About</a>
                         <ul class="ul2">
                             <li class="li2"><a class="a" href="#"title="Other">Other</a></li>
                             <li class="li2"><a class="a" href="#"title="Other">Other</a></li>
@@ -43,58 +46,58 @@
                             <li class="li2"><a class="a" href="#"title="Other">Other</a></li>
                         </ul>
                     </li>
-                    <li class="li item2"><a class="a" href="#" title="Portfolio">Portfolio</a>
+                    <li class="li item2"><a class="a" href="#works" title="Portfolio">Portfolio</a>
                         <ul class="ul3">
-                            <li class="li3 primero"><i class="fas fa-angle-left"></i><a class="a" href="#">Graphic Design</a>
+                            <li class="li3 first"><i class="fas fa-angle-left"></i><a class="a" href="#">Graphic Design</a>
                                 <ul class="sub1">
-                                    <li class="lisub"><a class="a" href="#">Other</a></li>
-                                    <li class="lisub"><a class="a" href="#">Other</a></li>
-                                    <li class="lisub"><a class="a" href="#">Other</a></li>
-                                    <li class="lisub"><a class="a" href="#">Other</a></li>
-                                    <li class="lisub"><a class="a" href="#">Other</a></li>
-                                    <li class="lisub"><a class="a" href="#">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work1.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work2.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work3.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work4.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work5.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work6.html">Other</a></li>
                                 </ul>
                             </li>
-                            <li class="li3 segundo"><i class="fas fa-angle-left"></i><a class="a" href="#">Frontend Development</a>
+                            <li class="li3 second"><i class="fas fa-angle-left"></i><a class="a" href="#">Frontend Development</a>
                                 <ul class="sub2">
-                                    <li class="lisub"><a class="a" href="#">Pixar</a></li>
-                                    <li class="lisub"><a class="a" href="#">STKHLM</a></li>
-                                    <li class="lisub"><a class="a" href="#">Other</a></li>
-                                    <li class="lisub"><a class="a" href="#">Other</a></li>
-                                    <li class="lisub"><a class="a" href="#">Other</a></li>
-                                    <li class="lisub"><a class="a" href="#">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work1.html">Pixar</a></li>
+                                    <li class="lisub"><a class="a" href="works/work2.html">STKHLM</a></li>
+                                    <li class="lisub"><a class="a" href="works/work3.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work4.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work5.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work6.html">Other</a></li>
                                 </ul>
                             </li>
-                            <li class="li3 tercero"><i class="fas fa-angle-left"></i><a class="a" href="#">Brand Identity</a>
+                            <li class="li3 third"><i class="fas fa-angle-left"></i><a class="a" href="#">Brand Identity</a>
                                 <ul class="sub3">
-                                    <li class="lisub"><a class="a" href="#">Other</a></li>
-                                    <li class="lisub"><a class="a" href="#">Other</a></li>
-                                    <li class="lisub"><a class="a" href="#">Other</a></li>
-                                    <li class="lisub"><a class="a" href="#">Other</a></li>
-                                    <li class="lisub"><a class="a" href="#">Other</a></li>
-                                    <li class="lisub"><a class="a" href="#">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work1.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work2.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work3.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work4.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work5.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work6.html">Other</a></li>
                                 </ul>
                             </li>
-                            <li class="li3 cuarto"><i class="fas fa-angle-left"></i><a class="a" href="#">Video</a>
+                            <li class="li3 fourth"><i class="fas fa-angle-left"></i><a class="a" href="#">Video</a>
                                 <ul class="sub4">
-                                    <li class="lisub"><a class="a" href="#">Other</a></li>
-                                    <li class="lisub"><a class="a" href="#">Other</a></li>
-                                    <li class="lisub"><a class="a" href="#">Other</a></li>
-                                    <li class="lisub"><a class="a" href="#">Other</a></li>
-                                    <li class="lisub"><a class="a" href="#">Other</a></li>
-                                    <li class="lisub"><a class="a" href="#">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work1.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work2.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work3.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work4.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work5.html">Other</a></li>
+                                    <li class="lisub"><a class="a" href="works/work6.html">Other</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
-                    <li class="li item3"><a class="a" href="#" title="Shop">Contact</a>
+                    <li class="li item3"><a class="a" href="contact.html" title="Shop">Contact</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!--INTRO // REVISAR CON v03-->
+    <!--INTRO-->
     <main class="main">
         <div class="main__intro bg__img" id="intro">
             <div class="main__overlay">
@@ -103,11 +106,10 @@
                   <div class="container">
                     <h1 class="main__h1">I'm Raquel Cuesta</h1>
                     <p class="main__p">
-                      <span class="main__text-items">Web Developer,Web Designer,Frontend Developer,Graphic Designer,UX - User
+                      <span class="text-slider-items">Web Developer,Web Designer,Frontend Developer,Graphic Designer,UX - User
                         Experience, UI - User Interface</span>
-                      <strong class="main__text-slider"></strong>
+                      <strong class="text-slider"></strong>
                     </p>
-                    <!-- <img class="main__bg" src="assets/img/intro-bg.jpg" alt="intro img" > -->
                   </div>
                 </div>
               </div>
@@ -260,7 +262,9 @@
             <div class="footer__credits">
                 Designed & Development by <a href="https://github.com/raqelcb"> RCBdesigner</a>
             </div>
-            <img class="footer__img" src="assets/img/rcb-logo-white.png" alt="logo">
+            <h2 class="footer__h2">
+              <img class="footer__img" src="assets/img/rcb-logo-orange.png" alt="logo">
+              </h2>
             <div class="footer__line"></div>
             <ul class="footer__ul">
                 <li class="footer__li"><a class="footer__a" href="https://github.com/raqelcb" title="Github" target="_blank"
@@ -271,10 +275,11 @@
         </div>
     </footer>
 
-    <a href="#" class="back-top">
+      <a href="#" class="back-top">
         <i class="fa fa-chevron-up"></i>
       </a>
       <div id="preloader"></div>
+
     
 </body>
 </html>
