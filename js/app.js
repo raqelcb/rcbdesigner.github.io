@@ -39,7 +39,7 @@ var siguienteFoto = function () {
   var fragmento = document.createDocumentFragment();
   var foto = 0;
   var slider = document.body.querySelector('.work__carousel');
-  var slider__img = slider.querySelectorAll('.work__img');
+  var slider__img = slider.querySelectorAll('.work__image');
   var ul = document.createElement('ul');
   ul.classList.add('slider__ul');
   fragmento.appendChild(ul);
