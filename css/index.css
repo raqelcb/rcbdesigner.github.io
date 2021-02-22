@@ -553,7 +553,7 @@ body {
   text-transform: uppercase;
   line-height: 0;
 }
-.works__title p {
+.works__title .works__p {
   margin-bottom: 0;
   position: relative;
   z-index: 2;
@@ -812,17 +812,37 @@ body {
 }
 
 /*ABOUT*/
+.about{
+  text-align: center;
+}
 .about__img {
   width: 20%;
   display: flex;
 }
-.about__part .about__p {
+.about__title {
+  margin-bottom: 4rem;
+  text-align: center;
+  padding: 30px 0;
+  position: relative;
+}
+.about__title span {
+  position: relative;
+  top: 30px;
+  color: #eef0f2;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 52px;
+  text-transform: uppercase;
+  line-height: 0;
+}
+.about__title .about__p {
   margin-bottom: 0;
   position: relative;
   z-index: 2;
 }
-/*Estilo del texto superpuesto*/
-.about__part .about__title .about__h2 {
+.about__title .about__h2 {
   font-size: 32px;
   font-weight: 700;
   text-transform: uppercase;
@@ -832,18 +852,20 @@ body {
   position: relative;
   z-index: 2;
 }
-.about__title span {
-  position: absolute;
-  top: 700px;
-  background: var(--alpha);
-  color: var(--black);
-  left: 0;
-  right: 0;
-  z-index: 1;
+.about__part .about__p {
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+.about__part .about__title .about__h2 {
+  font-size: 32px;
   font-weight: 700;
-  font-size: 1.2rem;
   text-transform: uppercase;
-  line-height: 0;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  color: #3b434a;
+  position: relative;
+  z-index: 2;
 }
 .about__part {
   margin-bottom: 3rem;
@@ -861,13 +883,79 @@ body {
   bottom: -12px;
 }
 
-/* .contact__mail{
+/*CONTACT*/
+.contact{
+  text-align: center;
+}
+.contact__title {
+  margin-bottom: 4rem;
+  text-align: center;
+  padding: 30px 0;
+  position: relative;
+}
+.contact__title span {
+  position: absolute;
+  top: 60px;
+  background: var(--alpha);
+  color: var(--black);
+  left: 0;
+  right: 0;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  line-height: 0;
+}
+.contact__title .contact__p{
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+.contact__mail{
   height: 200px;
   margin: inherit;
   position: relative;
-  color: #fff;
-  
-} */
+  color: var(--marked); 
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.contact__part .abstract{
+  margin-bottom: 200px;
+  position: relative;
+  z-index: 2;
+}
+.contact__part .contact__p {
+  margin-bottom: 200px;
+  position: relative;
+  z-index: 2;
+}
+.contact__part .contact__h2 {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  color: #3b434a;
+  position: relative;
+  z-index: 2;
+}
+.contact__part {
+  margin-bottom: 3rem;
+}
+.contact__h2 {
+  font-size: 2rem;
+  position: relative;
+}
+.contact__h2:before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: var(--marked);
+  width: 100px;
+  bottom: -12px;
+}
+
 
 /*FOOTER*/
 .footer {
