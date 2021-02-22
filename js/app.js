@@ -28,24 +28,24 @@ var siguienteFoto = function () {
   };
   
   var pasarFoto = function () {
-    slider__img.forEach(function (cadaImg, i) {
-      slider__img[i].classList.remove('ver');
+    work__image.forEach(function (cadaImg, i) {
+        work__image[i].classList.remove('ver');
       slider__li[i].classList.remove('ver');
     });
-    slider__img[foto].classList.add('ver');
+    work__image[foto].classList.add('ver');
     slider__li[foto].classList.add('ver');
   };
   
   var fragmento = document.createDocumentFragment();
   var foto = 0;
-  var slider = document.body.querySelector('.work__carousel');
-  var slider__img = slider.querySelectorAll('.work__image');
+  var work__carousel = document.body.querySelector('.work__carousel');
+  var work__image = slider.querySelectorAll('.work__image');
   var ul = document.createElement('ul');
   ul.classList.add('slider__ul');
   fragmento.appendChild(ul);
-  slider.appendChild(fragmento);
+  work__carousel.appendChild(fragmento);
   var slider__ul = slider.querySelector('.slider__ul');
-  slider__img.forEach(function (cadaImg, i) {
+  work__image.forEach(function (cadaImg, i) {
     var li = document.createElement('li');
     li.classList.add('slider__li');
   
@@ -56,11 +56,9 @@ var siguienteFoto = function () {
     fragmento.appendChild(li);
   });
   slider__ul.appendChild(fragmento);
-  var slider__li = slider__ul.querySelectorAll('.slider__li'); // Selecciono las dos flechas y
-  // La flecha[0] es el siguiente
-  // La flecha[1] es el anterior
+  var slider__li = slider__ul.querySelectorAll('.slider__li'); 
   
-  var flechas = slider.querySelectorAll('.slider__flecha');
+  var flechas = work__carousel.querySelectorAll('.slider__flecha');
   slider__li.forEach(function (cadaLi, i) {
     slider__li[i].addEventListener('click', function () {
       foto = i;
