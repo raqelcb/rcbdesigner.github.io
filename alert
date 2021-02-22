@@ -1,0 +1,63 @@
+##Pending
+
+###INDEX
+- Arreglar el grid de 6 img del index
+- Centrar el footer (logo) y arreglar el Designed by
+- Footer con mucho espacio en altura
+- La img de la intro en mobile no se ve entera
+- Hacer más grande el fab bars, en mobile se ve muy pequeño
+- Arreglar el menú responsive para que se pueda navegar
+- Los iconos del footer más grandes para responsive
+- En mobile no se ve la flecha del back-top
+- Añadir el typer en las palabras de la intro
+- Ocultar el menú cuando hago scroll
+
+###ABOUT
+- Textos como el portfolio
+- Memoji más pequeño (probar si puedo poner un gif)
+- Skills con barras de %
+- What I make hacerlo por secciones que sean clickables
+- Desde about si voy a portfolio está roto
+
+###CONTACT
+- Añadir algo como correo
+- Rrss
+- Formulario (más adelante)
+- Se queda el texto bajo el header
+- No funciona volver al portfolio desde el menu
+
+###WORKS PAGES
+- En mobile las img del slider se ven achatadlas, pero se puede pulsar y previsualizar entera
+- En mobile bajar el project information junto con el recuadro
+- Hacer los titulares del estilo de portfolio (duplicate)
+- El enlace del work1 no me lleva a GitHub
+- El enlace del work2 me lleva bien a GitHub 
+- Si estoy en un work y doy al menú en responsive, no despliega bien 
+
+
+✅dark mode
+✅responsive
+✅multiple pages
+✅external links
+✅BEM (revisar)
+✅JavaScript menú
+✅enlace a dominio
+✅validados html 
+✅auditoría 
+✅readme (revisar)
+✅Enlace logo header 
+
+⚠️preconect
+⚠️defer
+⚠️alt en img 
+⚠️loading lazy en img
+⚠️generar contenido
+⚠️preparar mock-ups
+⚠️revisar ortografía 
+⚠️revisar JavaScript, problemas (como añadir typer)
+
+❌sass
+❌typescript
+❌Enlace logo footer
+
+❓enlace del menú hacia el submenu, teniendo los html de los proyectos (work1) : portfolio > web design > work1 = pixar
