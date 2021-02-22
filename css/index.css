@@ -813,7 +813,7 @@ body {
   z-index: 2;
 }
 /*Estilo del texto superpuesto*/
-.about__part .about__h2 {
+.about__part .about__title .about__h2 {
   font-size: 32px;
   font-weight: 700;
   text-transform: uppercase;
@@ -823,19 +823,34 @@ body {
   position: relative;
   z-index: 2;
 }
-.about__part span {
+.about__title span {
   position: absolute;
-  top: 30px;
-  color: #eef0f2;
+  top: 700px;
+  background: var(--alpha);
+  color: var(--black);
   left: 0;
   right: 0;
   z-index: 1;
   font-weight: 700;
-  font-size: 52px;
+  font-size: 1.2rem;
   text-transform: uppercase;
   line-height: 0;
+} 
+.about__part {
+  margin-bottom: 3rem;
 }
-
+.about__h2 {
+  font-size: 2rem;
+  position: relative;
+}
+.about__h2:before {
+  content: '';
+  position: absolute;
+  height: 3px;
+  background-color: var(--marked);
+  width: 100px;
+  bottom: -12px;
+}
 
 
 /*FOOTER*/
