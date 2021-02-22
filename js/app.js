@@ -39,12 +39,12 @@ var siguienteFoto = function () {
   var fragmento = document.createDocumentFragment();
   var foto = 0;
   var work__carousel = document.body.querySelector('.work__carousel');
-  var work__image = slider.querySelectorAll('.work__image');
+  var work__image = work__carousel.querySelectorAll('.work__image');
   var ul = document.createElement('ul');
   ul.classList.add('slider__ul');
   fragmento.appendChild(ul);
   work__carousel.appendChild(fragmento);
-  var slider__ul = slider.querySelector('.slider__ul');
+  var slider__ul = work__carousel.querySelector('.slider__ul');
   work__image.forEach(function (cadaImg, i) {
     var li = document.createElement('li');
     li.classList.add('slider__li');
@@ -68,6 +68,12 @@ var siguienteFoto = function () {
   flechas[0].addEventListener('click', siguienteFoto);
   flechas[1].addEventListener('click', anteriorFoto);
 
+//   (function($) {
+//     "use strict";
+  
+//     var nav = $('nav');
+//     var navHeight = nav.outerHeight();
+  
 
 //  // Preloader
 //  $(window).on('load', function() {
@@ -79,23 +85,23 @@ var siguienteFoto = function () {
 //   });
 
 
-// Back to top button
-$(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
-      $('.back-top').fadeIn('slow');
-    } else {
-      $('.back-top').fadeOut('slow');
-    }
-  });
-  $('.back-top').click(function() {
-    $('html, body').animate({
-      scrollTop: 0
-    }, 1500, 'easeInOutExpo');
-    return false;
-  });
+// // Back to top button
+// $(window).scroll(function() {
+//     if ($(this).scrollTop() > 100) {
+//       $('.back-top').fadeIn('slow');
+//     } else {
+//       $('.back-top').fadeOut('slow');
+//     }
+//   });
+//   $('.back-top').click(function() {
+//     $('html, body').animate({
+//       scrollTop: 0
+//     }, 1500, 'easeInOutExpo');
+//     return false;
+//   });
 
 
-// /*--/ Star Typed /--*/
+//  /*--/ Star Typed /--*/
 // if ($('.text-slider').length == 1) {
 //     var typed_strings = $('.text-slider-items').text();
 //     var typed = new Typed('.text-slider', {
@@ -106,3 +112,4 @@ $(window).scroll(function() {
 //       backSpeed: 30
 //     });
 //   }
+// })(jQuery);
