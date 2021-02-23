@@ -535,6 +535,7 @@ body {
   align-items: center;
   align-content: initial;
 }
+/*Estilo del texto superpuesto*/
 .works__title {
   margin-bottom: 4rem;
   text-align: center;
@@ -558,7 +559,7 @@ body {
   position: relative;
   z-index: 2;
 }
-/*Estilo del texto superpuesto*/
+
 .works__title .works__h2 {
   font-size: 32px;
   font-weight: 700;
@@ -729,6 +730,29 @@ body {
   z-index: 2;
 }
 /*DUPLICATE TEXT*/
+.work__title {
+  margin-bottom: 4rem;
+  text-align: center;
+  padding: 30px 0;
+  position: relative;
+}
+.work__title span {
+  position: absolute;
+  top: 30px;
+  color: #eef0f2;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 52px;
+  text-transform: uppercase;
+  line-height: 0;
+}
+.work__title .works__p {
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
 .work__details .work__info .work__h3 {
   font-size: 32px;
   font-weight: 700;
@@ -750,7 +774,17 @@ body {
   font-size: 32px;
   text-transform: uppercase;
   line-height: 0;
-} /*DUPLICATE*/
+} 
+.work__title .work__h2 {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  color: #3b434a;
+  position: relative;
+  z-index: 2;
+}
 .work__li {
   color: var(--white);
 }
@@ -763,53 +797,9 @@ body {
   margin-top: 10px;
 }
 .work__details .work__description {
-  padding-top: 50px;
+  padding-top: 20px;
 }
-/*DUPLICATE TEXT*/
-.work__details .work__description .work__h2 {
-  margin-bottom: 20px;
-  font-size: 32px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  padding-bottom: 0;
-  color: #3b434a;
-  position: relative;
-  z-index: 2;
-}
-.work__description span {
-  position: absolute;
-  top: 700px;
-  background: var(--alpha);
-  color: var(--black);
-  left: 0;
-  right: 0;
-  z-index: 1;
-  font-weight: 700;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  line-height: 0;
-} /**/
-.work__details .work__description .work__p {
-  padding: 0 0 0 0;
-}
-.work__article .work__h4 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  font-size: 1.2rem;
-  background: var(--alpha);
-  color: var(--white);
-  backdrop-filter: blur(20px);
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.5s ease;
-  opacity: 0;
-}
+
 
 /*ABOUT*/
 .about{
