@@ -28,24 +28,24 @@ var siguienteFoto = function () {
   };
   
   var pasarFoto = function () {
-    work__image.forEach(function (cadaImg, i) {
-        work__image[i].classList.remove('ver');
+    slider__img.forEach(function (cadaImg, i) {
+      slider__img[i].classList.remove('ver');
       slider__li[i].classList.remove('ver');
     });
-    work__image[foto].classList.add('ver');
+    slider__img[foto].classList.add('ver');
     slider__li[foto].classList.add('ver');
   };
   
   var fragmento = document.createDocumentFragment();
   var foto = 0;
-  var work__carousel = document.body.querySelector('.work__carousel');
-  var work__image = work__carousel.querySelectorAll('.work__image');
+  var slider = document.body.querySelector('.work__carousel');
+  var slider__img = slider.querySelectorAll('.work__image');
   var ul = document.createElement('ul');
   ul.classList.add('slider__ul');
   fragmento.appendChild(ul);
-  work__carousel.appendChild(fragmento);
-  var slider__ul = work__carousel.querySelector('.slider__ul');
-  work__image.forEach(function (cadaImg, i) {
+  slider.appendChild(fragmento);
+  var slider__ul = slider.querySelector('.slider__ul');
+  slider__img.forEach(function (cadaImg, i) {
     var li = document.createElement('li');
     li.classList.add('slider__li');
   
@@ -56,9 +56,11 @@ var siguienteFoto = function () {
     fragmento.appendChild(li);
   });
   slider__ul.appendChild(fragmento);
-  var slider__li = slider__ul.querySelectorAll('.slider__li'); 
+  var slider__li = slider__ul.querySelectorAll('.slider__li'); // Selecciono las dos flechas y
+  // La flecha[0] es el siguiente
+  // La flecha[1] es el anterior
   
-  var flechas = work__carousel.querySelectorAll('.slider__flecha');
+  var flechas = slider.querySelectorAll('.slider__flecha');
   slider__li.forEach(function (cadaLi, i) {
     slider__li[i].addEventListener('click', function () {
       foto = i;
@@ -68,12 +70,6 @@ var siguienteFoto = function () {
   flechas[0].addEventListener('click', siguienteFoto);
   flechas[1].addEventListener('click', anteriorFoto);
 
-//   (function($) {
-//     "use strict";
-  
-//     var nav = $('nav');
-//     var navHeight = nav.outerHeight();
-  
 
 //  // Preloader
 //  $(window).on('load', function() {
@@ -85,23 +81,23 @@ var siguienteFoto = function () {
 //   });
 
 
-// // Back to top button
-// $(window).scroll(function() {
-//     if ($(this).scrollTop() > 100) {
-//       $('.back-top').fadeIn('slow');
-//     } else {
-//       $('.back-top').fadeOut('slow');
-//     }
-//   });
-//   $('.back-top').click(function() {
-//     $('html, body').animate({
-//       scrollTop: 0
-//     }, 1500, 'easeInOutExpo');
-//     return false;
-//   });
+// Back to top button
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $('.back-top').fadeIn('slow');
+    } else {
+      $('.back-top').fadeOut('slow');
+    }
+  });
+  $('.back-top').click(function() {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 1500, 'easeInOutExpo');
+    return false;
+  });
 
 
-//  /*--/ Star Typed /--*/
+// /*--/ Star Typed /--*/
 // if ($('.text-slider').length == 1) {
 //     var typed_strings = $('.text-slider-items').text();
 //     var typed = new Typed('.text-slider', {
@@ -112,4 +108,3 @@ var siguienteFoto = function () {
 //       backSpeed: 30
 //     });
 //   }
-// })(jQuery);
