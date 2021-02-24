@@ -839,12 +839,13 @@ body {
   line-height: 0;
 }
 .work__title .work__h2 {
-  font-size: 32px;
+  font-size: 70px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding-bottom: 0;
-  color: var(--alpha);
+  color: var(--marked);
+  opacity: .3;
   position: relative;
   z-index: 2;
 }
