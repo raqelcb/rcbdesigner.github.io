@@ -875,13 +875,6 @@ span.smalltitle {
   float: left;
 }
 
-.make .title h1 .harf:after {
-  content: "W";
-}
-.why .title h1:after {
-  content: "W";
-}
-
 .relative {
   position: relative;
     padding: 30px 0;
