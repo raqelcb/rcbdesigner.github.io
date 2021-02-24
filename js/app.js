@@ -71,6 +71,34 @@ var siguienteFoto = function () {
   flechas[1].addEventListener('click', anteriorFoto);
 
 
+  $(document).ready(function () {
+    var over = true;
+
+
+    $(".tabbuton").mouseover(function () {
+
+      $(".tabbuton").removeClass("highlight");
+      $(this).toggleClass("highlight");
+      var tl0 = new TimelineLite();
+      TweenMax.fromTo(".titletab", 0.5, { y: 0 + "%", opacity: 1 }, { y: -10 + "%", opacity: 0, ease: Quart.easeInOut });
+      TweenMax.fromTo(".tabcontp li", 0.5, { y: 0 + "%", opacity: 1 }, { y: -10 + "%", opacity: 0, ease: Quart.easeInOut });
+
+      var text = $(this).text();
+      var textalt = $(this).parent().find(".altinfo").html();
+      setTimeout(function () {
+
+        $(".titletab").html(text);
+        $(".tabcontp").html(textalt);
+
+        tl0.fromTo(".titletab", 0.5, { y: -20 + "%", opacity: 0 }, { y: 0 + "%", opacity: 1, ease: Quart.easeInOut });
+
+        tl0.fromTo(".tabcontp li", 0.5, { y: -20 + "%", opacity: 0 }, { y: 0 + "%", opacity: 1, ease: Quart.easeInOut });
+
+      }, 500);
+
+    });
+    
+
 //  // Preloader
 //  $(window).on('load', function() {
 //     if ($('#preloader').length) {
