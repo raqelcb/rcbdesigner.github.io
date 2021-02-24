@@ -56,9 +56,7 @@ var siguienteFoto = function () {
     fragmento.appendChild(li);
   });
   slider__ul.appendChild(fragmento);
-  var slider__li = slider__ul.querySelectorAll('.slider__li'); // Selecciono las dos flechas y
-  // La flecha[0] es el siguiente
-  // La flecha[1] es el anterior
+  var slider__li = slider__ul.querySelectorAll('.slider__li'); 
   
   var flechas = slider.querySelectorAll('.slider__flecha');
   slider__li.forEach(function (cadaLi, i) {
@@ -95,16 +93,3 @@ $(window).scroll(function() {
     }, 1500, 'easeInOutExpo');
     return false;
   });
-
-
-// /*--/ Star Typed /--*/
-// if ($('.text-slider').length == 1) {
-//     var typed_strings = $('.text-slider-items').text();
-//     var typed = new Typed('.text-slider', {
-//       strings: typed_strings.split(','),
-//       typeSpeed: 80,
-//       loop: true,
-//       backDelay: 1100,
-//       backSpeed: 30
-//     });
-//   }
