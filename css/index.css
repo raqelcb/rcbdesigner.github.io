@@ -512,7 +512,6 @@ body {
 }
 .main__grid2 {
   margin: 2em 0;
-  padding-left: 340px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1em;
@@ -552,7 +551,7 @@ body {
   align-items: center;
 }
 .about__studies{
-  padding-left: 380px;
+  padding-left: 8%;
   text-align: center;
   justify-content: center;
   align-items: center;
