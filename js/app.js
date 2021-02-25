@@ -17,6 +17,22 @@ fila.forEach(function (cadaFila, i) {
         fila[i].classList.add('ver');
     });
 });
+ /*TYPED*/
+var options = {
+  strings: ['Web Developer',
+  'Web Designer',
+  'Frontend Developer',
+  'Graphic Designer',
+  'UX - User Experience',
+  'UI - User Interface',
+  'Racing Girl'],
+  typeSpeed: 40,
+  loop: true,
+  backDelay: 2000,
+  backSpeed: 80
+  };
+  
+  var typed = new Typed('.text-slider-items', options);
 
 /*SLIDER*/
 var siguienteFoto = function () {
