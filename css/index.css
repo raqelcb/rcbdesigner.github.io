@@ -484,10 +484,10 @@ body {
   align-content: initial;
 }
 .main__center {
-  width: 80%;
+  width: 25%;
   max-width: 1200px;
   height: auto;
-  margin: 2em 0;
+  /* margin: 2em 0; */
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -510,23 +510,60 @@ body {
   justify-content: center;
   align-items: center;
 }
-.main__col {
-  width: calc( 90% / 2 );
-  height: auto;
-  background-color: transparent;
+.main__grid2 {
+  margin: 2em 0;
+  padding-left: 340px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  
 }
-@media screen and (max-width: 800px) {
-  .main__col {
-    width: 90%;
+@media screen and (max-width: 700px) {
+  .main__grid2 {
+    grid-template-columns: repeat(1, 1fr);
+    width: 95%;
+    height: 100%;
   }
 }
+.about__skill {
+  margin: 0.4em 1em;
+  font-size: 1em;
+  font-weight: 400;
+  text-align: center;
+}
+.about__skill-c {
+  margin: 0.5 1em;
+  font-size: 1.2em;
+  font-weight: 400;
+  text-align: center;
+  color: var(--marked);
+  text-transform: uppercase;
+}
+.about__skill-col{
+  width: 100%;
+  height: auto;
+  padding: 1em;
+  border: solid var(--blanco-trans) 1px;
+  border-radius: 0.4em;
+  background-color: var(--negro);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.about__studies{
+  padding-left: 380px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
 .container__intro {
   padding: 400px 0;
 }
 .container {
   max-width: 1200px;
   width: 100%;
-  display: table;
   padding: 20px;
   margin: auto;
 }
@@ -1137,7 +1174,7 @@ transform:translateY(-50%);
 }
 
 
-.flexy {
+/* .flexy {
   display: flex;
 align-items: center;
 }
@@ -1156,7 +1193,7 @@ a.tabbuton:hover {
 }
 span.altinfo {
   display: none;
-}
+} */
 .changabletabcont {
   /* display: flex; */
   width: 70%;
@@ -1177,11 +1214,11 @@ opacity: 1;
 
 .main__accordion {
   width: auto;
-  margin: 0.5em 0 2em 0;
+  /* margin: 0.5em 0 2em 0; */
   display: flex;
   flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
 }
 .main__row {
   width: auto;
@@ -1189,15 +1226,15 @@ opacity: 1;
   border-bottom: solid var(--white) 0.1px;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
 }
 .main__row.ver .main__oculto {
   height: auto;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   opacity: 1;
 }
 .main__oculto {
