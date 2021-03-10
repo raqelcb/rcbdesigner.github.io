@@ -1,9 +1,4 @@
-/**
-* Template Name: DevFolio - v2.4.0
-* Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 (function($) {
   "use strict";
 
@@ -125,18 +120,6 @@
     });
   }
 
-  /*--/ Testimonials owl /--*/
-  $('#testimonial-mf').owlCarousel({
-    margin: 20,
-    autoplay: true,
-    autoplayTimeout: 4000,
-    autoplayHoverPause: true,
-    responsive: {
-      0: {
-        items: 1,
-      }
-    }
-  });
 
   // Portfolio details carousel
   $(".portfolio-details-carousel").owlCarousel({
