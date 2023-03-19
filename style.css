@@ -110,6 +110,12 @@ h5 {
 	margin-left: 20px 
 }
 
+.image_box {
+	margin: 20px 0 20px 0;
+	padding: 0px;
+	height: 80px;
+}
+
 .list_01 {
 	margin: 0 0 20px 40px;
 	padding: 0px;
@@ -118,7 +124,7 @@ h5 {
 .list_01 li {
 	margin: 0;
 	padding: 0 0 15px 0;
-	list-style-image: url(images/list_icon.png);
+	/* list-style-image: url(images/list_icon.png); */
 	text-decoration: underline;	
 }
 
