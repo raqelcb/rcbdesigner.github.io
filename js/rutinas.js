@@ -66,6 +66,40 @@ function addScheduleTable(day, schedule) {
     app.appendChild(table);
 }
 
+// Función para mostrar una lista de opciones con selección múltiple
+function addMultiSelect(question, options, callback) {
+    addQuestion(question);
+    const container = document.createElement("div");
+    const selected = new Set();
+
+    options.forEach(option => {
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.value = option.value;
+        checkbox.id = option.value;
+
+        const label = document.createElement("label");
+        label.textContent = option.text;
+        label.htmlFor = option.value;
+
+        container.appendChild(checkbox);
+        container.appendChild(label);
+        container.appendChild(document.createElement("br"));
+    });
+
+    const submitButton = document.createElement("button");
+    submitButton.textContent = "Confirmar";
+    submitButton.onclick = () => {
+        const selectedValues = Array.from(container.querySelectorAll("input:checked"))
+            .map(input => input.value);
+        callback(selectedValues);
+        container.remove();
+    };
+
+    container.appendChild(submitButton);
+    app.appendChild(container);
+}
+
 // Inicia el flujo de decisiones
 function startRoutine() {
     addQuestion("¿Es día lectivo o fin de semana?");
@@ -136,7 +170,6 @@ function handleDaySelection(day) {
         ]
     };
 
-    // Muestra el horario correspondiente al día
     addScheduleTable(day, schedules[day] || []);
     askIfHasHomework();
 }
@@ -153,7 +186,6 @@ function askIfHasHomework() {
             if (response === "si") {
                 askHomeworkSubjects();
             } else {
-                addResponse("No tienes deberes. ¡Qué suerte!");
                 askIfHasExam();
             }
         }
@@ -172,10 +204,10 @@ function askHomeworkSubjects() {
     addMultiSelect("¿En qué asignaturas tienes deberes?", subjects, selectedSubjects => {
         if (selectedSubjects.length > 0) {
             addResponse(`Tienes deberes en: ${selectedSubjects.join(", ")}.`);
+            askIfHomeworkDone();
         } else {
-            addResponse("No seleccionaste asignaturas para deberes.");
+            askIfHasExam();
         }
-        askIfHomeworkDone();
     });
 }
 
@@ -210,8 +242,7 @@ function askIfHasExam() {
             if (response === "si") {
                 askExamSubjects();
             } else {
-                addResponse("No tienes examen. ¡Qué alivio!");
-                handleFinalRoutine();
+                manageTime();
             }
         }
     );
@@ -229,10 +260,10 @@ function askExamSubjects() {
     addMultiSelect("¿En qué asignaturas tienes examen?", subjects, selectedSubjects => {
         if (selectedSubjects.length > 0) {
             addResponse(`Tienes examen en: ${selectedSubjects.join(", ")}.`);
+            askIfExamStudied();
         } else {
-            addResponse("No seleccionaste asignaturas para el examen.");
+            manageTime();
         }
-        askIfExamStudied();
     });
 }
 
@@ -250,58 +281,36 @@ function askIfExamStudied() {
             } else {
                 addResponse("¡Deberías haber estudiado! 😠");
             }
-            handleFinalRoutine();
+            manageTime();
         }
     );
 }
 
-// Rutina final del día
-function handleFinalRoutine() {
-    addQuestion("¿Qué actividades realizarás para cerrar el día?");
-    addOptions(
-        [
-            { text: "Hacer deberes", value: "deberes" },
-            { text: "Leer", value: "leer" },
-            { text: "Estudiar", value: "estudiar" },
-            { text: "Descansar", value: "descansar" }
-        ],
-        activity => {
-            addResponse(`Has seleccionado: ${activity}. ¡Día completado!`);
+// Gestión del tiempo según la hora
+function manageTime() {
+    addQuestion("¿Qué hora es ahora? (Formato 24h, ejemplo: 18)");
+    const input = document.createElement("input");
+    input.type = "number";
+    input.placeholder = "Introduce la hora";
+    app.appendChild(input);
+
+    const button = document.createElement("button");
+    button.textContent = "Confirmar";
+    button.onclick = () => {
+        const hora = parseInt(input.value);
+        if (hora >= 16 && hora < 18) {
+            addResponse("Es hora de actividades extraescolares.");
+        } else if (hora >= 18 && hora < 20) {
+            addResponse("Tiempo libre: Puedes descansar o jugar.");
+        } else if (hora >= 20 && hora < 21) {
+            addResponse("Es hora de cenar.");
+        } else if (hora >= 21) {
+            addResponse("Es hora de ducharse y prepararse para dormir.");
+        } else {
+            addResponse("Aprovecha para hacer tareas o estudiar.");
         }
-    );
-}
-
-// Función para selección múltiple
-function addMultiSelect(question, options, callback) {
-    addQuestion(question);
-    const container = document.createElement("div");
-    const selected = new Set();
-
-    options.forEach(option => {
-        const checkbox = document.createElement("input");
-        checkbox.type = "checkbox";
-        checkbox.value = option.value;
-        checkbox.id = option.value;
-
-        const label = document.createElement("label");
-        label.textContent = option.text;
-        label.htmlFor = option.value;
-
-        container.appendChild(checkbox);
-        container.appendChild(label);
-        container.appendChild(document.createElement("br"));
-    });
-
-    const submitButton = document.createElement("button");
-    submitButton.textContent = "Confirmar";
-    submitButton.onclick = () => {
-        const selectedValues = Array.from(container.querySelectorAll("input:checked")).map(input => input.value);
-        callback(selectedValues);
-        container.remove();
     };
-
-    container.appendChild(submitButton);
-    app.appendChild(container);
+    app.appendChild(button);
 }
 
 // Inicia el programa
